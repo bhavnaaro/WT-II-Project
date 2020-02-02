@@ -24,6 +24,29 @@ block content
         |  <span id='userInfoLocation'></span>
     // /USER INFO
 
+    // COURSE INFO
+    #courseInfo
+      h2 Course Info
+      p
+        strong Name:
+        |  <span id='courseInfoName'></span>
+        br
+        strong Instructor:
+        |  <span id='courseInfoInstructor'></span>
+        br
+        strong Details:
+        |  <span id='courseInfoDetails'></span>
+        br
+        strong Duration:
+        |  <span id='courseInfoDuration'></span>
+        br
+        strong Location:
+        |  <span id='courseInfoLocation'></span>
+        br
+        strong Payment:
+        |  <span id='courseInfoPayment'></span>
+    // /COURSE INFO
+
     // USER LIST
     h2 User List
     #userList
@@ -61,5 +84,21 @@ block content
         br
         button#btnAddUser Add User
     // /ADD USER
+
+    // ADD COURSE
+    h2 Add Course
+    #addCourse
+      fieldset
+        input#inputCourseName(type='text', placeholder='Course Name:')
+        input#inputCourseInstructor(type='text', placeholder='Instructor:')
+        br
+        input#inputCourseDetails(type='text', placeholder='Details:')
+        input#inputCourseDuration(type='number', placeholder='Duration:')
+        br
+        input#inputCourseLocation(type='text', placeholder='Location')
+        input#inputCoursePayment(type='text', placeholder='Payment')
+        br
+        button#btnAddUser Add Course
+    // /ADD COURSE
 
   // /WRAPPER
