@@ -112,10 +112,10 @@ function showCourseInfo(event) {
     //Populate Info Box
     $('#courseInfoName').text(thisCourseObject.coursename);
     $('#courseInfoInstructor').text(thisCourseObject.instructor);
-    $('#userInfoDetails').text(thisCourseObject.details);
-    $('#userInfoDuration').text(thisCourseObject.duration);
-    $('#userInfoLocation').text(thisCourseObject.location);
-    $('#userInfoPayment').text(thisCourseObject.payment);
+    $('#courseInfoDetails').text(thisCourseObject.details);
+    $('#courseInfoDuration').text(thisCourseObject.duration);
+    $('#courseInfoLocation').text(thisCourseObject.location);
+    $('#courseInfoPayment').text(thisCourseObject.payment);
 
 
 };
