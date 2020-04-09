@@ -1,18 +1,19 @@
 {
-  "name": "project",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
+  "name": "chap-app",
+  "version": "1.0.0",
+  "description": "lets chat",
+  "main": "server.js",
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "jade": "~1.11.0",
-    "mongodb": "^3.5.2",
-    "monk": "^7.1.2",
-    "morgan": "~1.9.1"
-  }
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "bhavna",
+  "license": "ISC"
 }
