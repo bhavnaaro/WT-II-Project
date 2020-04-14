@@ -6,7 +6,19 @@ from pymongo import MongoClient
 # parameter here is id of the course that the customer buys
 def get_recommendations(id):
     orders = pd.read_csv("OrderProduct.csv")
+    '''
+    #point the client at mongo URI
+    client = MongoClient('Mongo URI')
 
+    #select database
+    db = client['database_name']
+
+    #select the collection within the database
+    test = db.test
+
+    #convert entire collection to Pandas dataframe
+    orders = pd.DataFrame(list(test.find()))
+    '''
     # only retrieving the unique orders who's id match input parameter id
     orders_for_product = orders[orders.product_id == id].order_id.unique()
 
