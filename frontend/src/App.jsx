@@ -9,6 +9,8 @@ import Cards from './Cards';
 import Footer from './Footer';
 import Instructor from './Instructor';
 import About from './About';
+import Login from './Login';
+import Signup from './Signup';
 
 
 class App extends Component {
@@ -21,6 +23,8 @@ class App extends Component {
 					<Route exact path="/" component={Cards} />
 					<Route path="/Instructor" component={Instructor} />
 					<Route path="/About" component={About} />
+					<Route path="/Login" component={Login} />
+					<Route path="/Signup" component={Signup} />
 					<Footer />
 					
 				</div>

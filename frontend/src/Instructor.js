@@ -25,7 +25,7 @@ function Instructor() {
 
 	var rows = []
 	var count = 0;
-	for (i = 0; i < Math.floor(names.length / 3); i++) {
+	for (i = 0; i < Math.ceil(names.length / 3); i++) {
 		var cols = []
 		for (j = 0; j < 3 && count < names.length; j++) {
 			cols.push(<Col xs = {12} sm = {4} className = "person-wrapper" key = {j}>
