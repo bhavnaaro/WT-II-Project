@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Instructor from './Instructor';
 import Cards from './Cards'; 
+import Signup from './SignUp';
 
 
 
@@ -26,7 +27,9 @@ function Navbar() {
       <li className="nav-item">
         <a className="nav-link text-white text-uppercase ml-5" href="#">Contact Us</a>
       </li>
-      
+      <li className="nav-item">
+        <a className="nav-link text-white text-uppercase ml-5" href="/Signup" to="/Signup">Signup</a>
+      </li>
     </ul>
     
   </div>
