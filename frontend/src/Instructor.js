@@ -2,22 +2,52 @@ import React, { Component } from 'react';
 import { Container, Jumbotron, Row, Col, Image, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import h3 from './h3.jpg';
-import p1 from './p1.jpg';
-import p2 from './p2.jpeg';
-import p3 from './p3.png';
-import p4 from './p4.jpeg';
-import p5 from './p5.jpeg';
-import p6 from './p6.jpg';
 
 import './Instructor.css';
-import About from './About';
-import About2 from './About2';
-import About3 from './About3';
-import About4 from './About4';
-import About5 from './About5';
-import About6 from './About6';
 
 function Instructor() {
+
+	var imgs = ['p1.jpg','p2.jpeg','p3.png','p4.jpeg','p5.jpeg','p6.jpg']
+	var names = []
+	for(var i=0;i<6;i++) {
+		names.push('Frank');
+	}
+	var shortDescs = []
+	for(var i=0;i<6;i++) {
+		shortDescs.push('Hi there');
+	}
+	var longDescs = []
+	for(var i=0;i<6;i++) {
+		longDescs.push("Frank is a professor in Pes UNiversity who teacher python programing language for 1st yr students.Machine learning may have enjoyed enormous success of late, but it is just one method for achieving artificial intelligence.\n\nAt the birth of the field of AI in the 1950s, AI was defined as any machine capable of performing a task that would typically require human intelligence.\n\nAI systems will generally demonstrate at least some of the following traits: planning, learning, reasoning, problem solving, knowledge representation, perception, motion, and manipulation and, to a lesser extent, social intelligence and creativity.\n\nAlongside machine learning, there are various other approaches used to build AI systems, including evolutionary computation, where algorithms undergo random mutations and combinations between generations in an attempt to \"evolve\" optimal solutions, and expert systems, where computers are programmed with rules that allow them to mimic the behavior of a human expert in a specific domain, for example an autopilot system flying a plane.");
+	}
+
+
+	var rows=[]
+	var count=0;
+	for(var i=0;i<Math.floor(names.length/3);i++) {
+		var cols=[]
+		for(var j=0;j<3 && count<names.length;j++) {
+			cols.push(<Col xs={12} sm={4} className="person-wrapper" key={j}>
+			<Image className="profile-pic" src={require('./'+imgs[count])} roundedCircle />
+			<h3>{names[count]}</h3>
+			<p>{shortDescs[count]}</p>
+			<Link to={{
+			pathname:'/About', 
+			imgSrc: imgs[count], 
+			name: names[count],
+			desc: longDescs[count]
+			}}>
+			<Button Style="primary">About</Button>
+			</Link>
+		</Col>);
+		count++;
+		}
+		rows.push(<Row className="show-grid text-center" key={i}>
+			{cols}
+		</Row>);
+	}
+
+
 	return (
 		<Container>
 			<Jumbotron>
@@ -26,59 +56,7 @@ function Instructor() {
 			</Jumbotron>
 			
 			<h1 className="show-grid text-center">Our Instructors !! </h1>
-			
-			<Row className="show-grid text-center">
-				<Col xs={12} sm={4} className="person-wrapper">
-					<Image className="profile-pic" src={p1} roundedCircle />
-					<h3>Frank</h3>
-					<p>Hii there</p>
-					<Link to="/About">
-						<Button Style="primary">About</Button>
-					</Link>
-				</Col>
-				<Col xs={12} sm={4} className="person-wrapper">
-					<Image src={p2} roundedCircle className="profile-pic" />
-					<h3>Frank</h3>
-					<p>Hii there</p>
-					<Link to="/About2">
-						<Button Style="primary">About</Button>
-					</Link>
-				</Col>
-				<Col xs={12} sm={4} className="person-wrapper">
-					<Image src={p3} roundedCircle className="profile-pic" />
-					<h3>Frank</h3>
-					<p>Hii there</p>
-					<Link to="/About3">
-						<Button Style="primary">About</Button>
-					</Link>
-				</Col>
-			</Row>
-			<Row className="show-grid text-center">
-				<Col xs={12} sm={4} className="person-wrapper">
-					<Image src={p4} roundedCircle className="profile-pic" />
-					<h3>Frank</h3>
-					<p>Hii there</p>
-					<Link to="/About4">
-						<Button Style="primary">About</Button>
-					</Link>
-				</Col>
-				<Col xs={12} sm={4} className="person-wrapper">
-					<Image src={p5} roundedCircle className="profile-pic" />
-					<h3>Frank</h3>
-					<p>Hii there</p>
-					<Link to="/About5">
-						<Button Style="primary">About</Button>
-					</Link>
-				</Col>
-				<Col xs={12} sm={4} className="person-wrapper">
-					<Image src={p6} roundedCircle className="profile-pic" />
-					<h3>Frank</h3>
-					<p>Hii there</p>
-					<Link to="/About6">
-						<Button Style="primary">About</Button>
-					</Link>
-				</Col>
-			</Row>
+			{rows}
 		</Container>
 	);
 }

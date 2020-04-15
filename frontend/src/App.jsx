@@ -9,11 +9,6 @@ import Cards from './Cards';
 import Footer from './Footer';
 import Instructor from './Instructor';
 import About from './About';
-import About2 from './About2';
-import About3 from './About3';
-import About4 from './About4';
-import About5 from './About5';
-import About6 from './About6';
 
 
 class App extends Component {
@@ -26,11 +21,6 @@ class App extends Component {
 					<Route exact path="/" component={Cards} />
 					<Route path="/Instructor" component={Instructor} />
 					<Route path="/About" component={About} />
-					<Route path="/About2" component={About2} />
-					<Route path="/About3" component={About3} />
-					<Route path="/About4" component={About4} />
-					<Route path="/About5" component={About5} />
-					<Route path="/About6" component={About6} />
 					<Footer />
 					
 				</div>
