@@ -5,7 +5,7 @@ const CourseModel = require("../models/courseModel");
 
 router.get("/test", (req, res) => res.json({ msg: "instructor Works" }));
 
-//
+
 router.get("/all", (req, res) => {
     Instructormodel.find((err, instructor) => {
         if (err) {
