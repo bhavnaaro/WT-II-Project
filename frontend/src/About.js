@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import { Jumbotron, Container, Col, Image, Button } from 'react-bootstrap';
+import React from 'react';
+import { Jumbotron, Container, Col, Image } from 'react-bootstrap';
 
 import './About.css';
 import h3 from './h2.jpg';
-//import p1 from './p1.jpg';
 
 function About(props) {
 	return (
