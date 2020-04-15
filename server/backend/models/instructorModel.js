@@ -30,7 +30,16 @@ const schema = new mongoose.Schema({
     course:{
         type: String,
         ref: "Course"
+    },
+
+    shortDesc:{
+        type: String
+    },
+
+    longDescs:{
+        type: String
     }
+
 })
 
 
