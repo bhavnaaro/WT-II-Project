@@ -9,7 +9,7 @@ const schema = new mongoose.Schema({
         type: String
     },
     studentID: {
-        type: String,
+        type: Number,
         required: true
     },
     userType: {

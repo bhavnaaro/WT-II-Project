@@ -2,6 +2,10 @@ const mongoose = require("mongoose")
 
 const schema = new mongoose.Schema({
 
+    instructorID:{
+        type: Number,
+        required:true
+    },
     instructorName: {
         type: String
     },
@@ -32,15 +36,18 @@ const schema = new mongoose.Schema({
         ref: "Course"
     },
 
-    shortDesc:{
+    shortDescs:{
         type: String
     },
 
     longDescs:{
         type: String
-    }
+    },
 
-})
+    img:{
+        type:String
+    }
+});
 
 
 const Instructor = mongoose.model("Instructor", schema);

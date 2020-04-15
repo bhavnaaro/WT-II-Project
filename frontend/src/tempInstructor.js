@@ -10,11 +10,11 @@ function Instructor() {
   var i, j;
 
   const axios = require("axios");
-  url = "http://localhost:5000/instructor/all";
+  var url = "http://localhost:5000/instructor/all";
   axios
     .get(url)
     .then((response) => {
-      allInstructorData = response.data;
+      var allInstructorData = response.data;
       console.log(allInstructorData);
       // console.log(response.data.explanation);
       // recc_course.forEach(myFunction);
