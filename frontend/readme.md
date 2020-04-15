@@ -15,8 +15,7 @@ open my-app folder and Replace all the files in src folder with my src folder
 
 cd my-app
 
-npm i -save react-bootstrap
+npm i -save react-bootstrap react-router-dom react-card-flip
 
-npm i -save react-router-dom
 
 npm start
