@@ -15,8 +15,31 @@ courseRoutes.route("/").get(function(req, res) {
 
 courseRoutes.route("/:id").get(function(req, res) {
   let id = req.params.id;
-  courseModel.findById(id, function(err, courses) {
+  courseModel.findOne({'courseId':id}, function(err, courses) {
     res.json(courses);
+    //res.send("this is course page");
+
+    const axios = require('axios');
+    url = "http://localhost:5000/api/v1.0/recommendations/3";
+    axios.get(url)
+      .then(response => {
+        recc_course=response.data.data;
+        console.log(recc_course);
+       // console.log(response.data.explanation);
+        // recc_course.forEach(myFunction);
+
+        // function myFunction(item, index) {
+        //   console.log( index + ":" + item['name']);
+        // }
+      })
+      .catch(error => {
+        console.log(error);
+      });
+
+
+
+
+    console.log("course page",courses);
   });
 });
 
