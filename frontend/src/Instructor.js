@@ -7,7 +7,28 @@ import h3 from './h3.jpg';
 import './Instructor.css';
 
 function Instructor() {
-	var i, j;
+	var i,j;
+	console.log("@@@@@@@@@@@@@@@@@@@HELLO");
+
+	const axios = require("axios");
+	var url = "http://localhost:5000/instructor/all";
+	axios.get(url)
+		.then((response) => {
+			var allInstructorData = response.data;
+			console.log("_________________________________________________", allInstructorData);
+			// console.log(response.data.explanation);
+			//allInstructorData.forEach(myFunction);
+
+			// function myFunction(item, index) {
+			//    console.log( index + ":" + item['name']);
+			//  }
+		})
+		.catch((error) => {
+			console.log(error);
+		});
+	
+	
+	
 	var imgs = ['p1.jpg', 'p2.jpeg', 'p3.png', 'p4.jpeg', 'p5.jpeg', 'p6.jpg']
 	var names = []
 	for (i = 0; i < 6; i++) {
