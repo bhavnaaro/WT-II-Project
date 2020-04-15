@@ -8,27 +8,16 @@ let schemaCourse = new Schema({
   description: {
     type: String
   },
-  courseId: [
+  courseId: 
     {
       type: Number,
       required: true
     }
-  ],
-  startDate: {
-    type: Date
-  },
-  duration: {
-    type: String
-  },
-  instructorEmail: [
-    {
-      type: String,
-      ref: "instructor"
-    }
-  ],
-  mobileno: {
-    type: String
-  }
+  
+ 
+ 
+  
+  
 });
 
 const Course= mongoose.model("Course", schemaCourse);
