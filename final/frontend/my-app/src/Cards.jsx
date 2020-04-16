@@ -15,7 +15,7 @@ class Cards extends Component {
 
 	componentDidMount() {
 		
-		axios.get('http://localhost:5000/api/v1.0/recommendations/2')
+		axios.get('http://localhost:5001/api/v1.0/recommendations/2')
 				.then(res => {
 						this.setState({ recCourseData: res.data });
 				})
@@ -53,13 +53,14 @@ class Cards extends Component {
 				);
 		}
 
-		var imgs=this.imgs;
-		var names=this.names;
-		var shortDescs=this.shortDescs;
+		// var imgs=this.imgs;
+		// var names=this.names;
+		// var shortDescs=this.shortDescs;
 
-		// var imgs=himgs;
-		// var names=hnames;
-		// var shortDescs=hshortDescs;
+		var imgs=[ "django.jpg", "ml.jpg", "python.jpg"];
+		var names=[ "Django", "MachineLearning", "Python"];
+		var shortDescs=["Python-based open source web framework.", "Provides systems the ability to automatically learn and improve from experience.", "Python is an interpreted, high-level general purpose language."];
+		
 
 		var cols = []
 		for (i = 0; i < names.length; i++) {
