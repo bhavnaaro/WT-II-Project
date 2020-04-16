@@ -14,7 +14,7 @@ class Cards extends Component {
 	render() {
 		return (
 			<Container>
-				<Jumbotron className="jumbotron my-2">
+				<Jumbotron className="jumbotron my-2" style={{overflow:"hidden"}}>
 					<img className="card-img-top" src={h} alt="" />
 				
 				

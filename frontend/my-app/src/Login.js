@@ -22,9 +22,9 @@ function Login() {
 					</div>
 				</div>
 				<Button type="submit" Style="primary">Submit</Button>
-				<p className="forget-password text-right">
-					Forget<a href="/">password?</a>
-				</p>
+				{/* <p className="forget-password text-right">
+					Forgot<a href="/">password?</a>
+				</p> */}
 			</form>
 		</Container>
 	);

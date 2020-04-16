@@ -29,7 +29,7 @@ function SignUp() {
 				</div>
 				<Button type="submit" Style="primary">Sign Up</Button>
 				<h3 className="forgot-password text-right">
-					Already Registered <a href="/">Sign In?</a>
+					Already Registered <a href="/Login" to="/Login">Sign In?</a>
 				</h3>
 			</form> 
 		</Container>
