@@ -69,7 +69,7 @@ class CoursePage extends Component {
             <p>{cdata['courseDesc']}</p>
             <Button size="lg" block variant="dark" 
               disabled={this.state.enrollStatus!=="unenrolled"} 
-              onclick={(this.state.enrollStatus==="unenrolled")?handleEnroll:null} 
+              onclick={(this.state.enrollStatus==="unenrolled") ? this.handleEnroll : null} 
             >
               {(this.state.enrollStatus==="unenrolled") ? "Enroll" : ((this.state.enrollStatus==="enrolling") ? "Enrolling" : "Enrolled")}
             </Button>
