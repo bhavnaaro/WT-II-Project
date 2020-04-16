@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Card from './CardUI';
 
-import img1 from './ai.jpeg';
+import img1 from './ai.jpg';
 import img2 from './bd.jpg';
 import img3 from './django.jpg';
 import img4 from './ml.jpg';
-import img5 from './python.jpeg';
+import img5 from './python.jpg';
 import { Container, Jumbotron } from 'react-bootstrap';
 import h from './h.jpg';
 

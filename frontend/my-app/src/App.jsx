@@ -9,6 +9,8 @@ import Cards from './Cards';
 import Footer from './Footer';
 import Instructor from './Instructor';
 import About from './About';
+import Home from './Home';
+import CoursePage from './CoursePage';
 
 
 class App extends Component {
@@ -18,9 +20,11 @@ class App extends Component {
 			
 				<div>
 					<Navbar />
-					<Route exact path="/" component={Cards} />
+					<Route exact path="/" component={Home} />
 					<Route path="/Instructor" component={Instructor} />
 					<Route path="/About" component={About} />
+					<Route path="/Courses" component={Cards} />
+					<Route path="/Courses/:coursename?" component={CoursePage} />
 					<Footer />
 					
 				</div>
