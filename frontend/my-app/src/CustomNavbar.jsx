@@ -7,7 +7,7 @@ import Signup from './SignUp';
 function Navbar() {
 	return(
 		<nav className="navbar navbar-expand-lg navbar-light bg-dark">
-  <a class="navbar-brand" href="#">Online Learning Portal</a>
+  <a class="navbar-brand" href="#" style={{ color:"white" }}>wiseBiRD</a>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>

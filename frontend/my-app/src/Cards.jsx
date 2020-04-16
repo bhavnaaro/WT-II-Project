@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Card from './CardUI';
-import axios from './axios';
+import axios from 'axios';
 import { Container, Jumbotron, Row, Col} from 'react-bootstrap';
 import h from './h.jpg';
 
@@ -14,7 +14,8 @@ class Cards extends Component {
 	}
 
 	componentDidMount() {
-		axios.get('http://localhost:5000/')
+		
+		axios.get('http://localhost:5000/api/v1.0/recommendations/2')
 				.then(res => {
 						this.setState({ recCourseData: res.data });
 				})
@@ -26,7 +27,7 @@ class Cards extends Component {
 	myFunction(item,index) {
 		this.imgs.push(item['img']);
 		this.names.push(item['courseName']);
-		this.shortDescs.push(item['shortDescs']);
+		this.shortDescs.push(item['desc']);
 	}
 
 
@@ -52,13 +53,13 @@ class Cards extends Component {
 				);
 		}
 
-		// var imgs=this.imgs;
-		// var names=this.names;
-		// var shortDescs=this.shortDescs;
+		var imgs=this.imgs;
+		var names=this.names;
+		var shortDescs=this.shortDescs;
 
-		var imgs=himgs;
-		var names=hnames;
-		var shortDescs=hshortDescs;
+		// var imgs=himgs;
+		// var names=hnames;
+		// var shortDescs=hshortDescs;
 
 		var cols = []
 		for (i = 0; i < names.length; i++) {

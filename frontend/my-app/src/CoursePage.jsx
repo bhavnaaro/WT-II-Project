@@ -26,7 +26,7 @@ class CoursePage extends Component {
       courseData: { 
         'img': cname + '.jpg',
         'courseName': cname,
-        'courseDesc': cname.repeat(50)
+        'courseDesc': "this is the description for the "+cname+" it is very useful course"
       },
       enrollStatus: this.state.enrollStatus
     });
