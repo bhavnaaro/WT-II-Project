@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Jumbotron, Container, Col } from 'react-bootstrap';
+import { Jumbotron, Container, Col, Button } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 
 class CoursePage extends Component {
 
   constructor(props) {
 		super(props);
-    this.state = { courseData: {} };
+    this.state = { courseData: {}, enrollStatus: "unenrolled" };
+    this.handleEnroll = this.handleEnroll.bind(this);
 	}
 
 	componentDidMount() {
@@ -26,9 +27,34 @@ class CoursePage extends Component {
         'img': cname + '.jpg',
         'courseName': cname,
         'courseDesc': cname.repeat(50)
-      }
+      },
+      enrollStatus: this.state.enrollStatus
     });
-	}
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextState.enrollStatus==="enrolling") {
+      // axios.get('http://localhost:5000/')
+      // 		.then(res => {
+      // 				this.setState({
+      //          courseData: this.state.courseData,
+      //          enrollStatus: "enrolled"
+      //        });
+      // 		})
+      // 		.catch(function (error) {
+      // 				console.log(error);
+      // 		});
+    }
+    return true;
+  }
+  
+  handleEnroll(e) {
+    e.preventDefault();
+    this.setState({
+      courseData: this.state.courseData,
+      enrollStatus: "enrolling"
+    });
+  }
 
   render() {
     var cdata = this.state.courseData
@@ -41,6 +67,12 @@ class CoursePage extends Component {
         <Col xs={12} sm={8} smoffset={2}>
             <h2>{cdata['courseName']}</h2>
             <p>{cdata['courseDesc']}</p>
+            <Button size="lg" block variant="dark" 
+              disabled={this.state.enrollStatus!=="unenrolled"} 
+              onclick={(this.state.enrollStatus==="unenrolled")?handleEnroll:null} 
+            >
+              {(this.state.enrollStatus==="unenrolled") ? "Enroll" : ((this.state.enrollStatus==="enrolling") ? "Enrolling" : "Enrolled")}
+            </Button>
         </Col>
 			</Container>);
     }
