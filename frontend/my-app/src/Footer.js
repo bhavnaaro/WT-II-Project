@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link}  from 'react-router';
 
 function Footer() {
 	return(
@@ -6,7 +7,8 @@ function Footer() {
     <div className="container">
       <form className="form-inline ml-2 my-lg-0">
       
-      <button className="btn btn-outline-success ml-sm-2" type="submit">Chat with us</button>
+          {/* <Link to="http://localhost:8080" className="btn btn-outline-success ml-sm-2">Chat with us</Link> */}
+          <a href="http://localhost:8080" className="btn btn-outline-success ml-sm-2">Chat with us</a>
     </form>
     </div>
    
