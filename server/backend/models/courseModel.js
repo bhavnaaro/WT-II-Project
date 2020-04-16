@@ -11,7 +11,7 @@ let schemaCourse = new Schema({
   },
   desc: {
     type: String
-  },
+  }
   
   
  
