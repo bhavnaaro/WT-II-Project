@@ -1,0 +1,104 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to our Course and User Overview Page
+
+  // Wrapper
+  #wrapper
+
+    // USER INFO
+    #userInfo
+      h2 User Info
+      p
+        strong Name:
+        |  <span id='userInfoName'></span>
+        br
+        strong Age:
+        |  <span id='userInfoAge'></span>
+        br
+        strong Gender:
+        |  <span id='userInfoGender'></span>
+        br
+        strong Location:
+        |  <span id='userInfoLocation'></span>
+    // /USER INFO
+
+    // COURSE INFO
+    #courseInfo
+      h2 Course Info
+      p
+        strong Name:
+        |  <span id='courseInfoName'></span>
+        br
+        strong Instructor:
+        |  <span id='courseInfoInstructor'></span>
+        br
+        strong Details:
+        |  <span id='courseInfoDetails'></span>
+        br
+        strong Duration:
+        |  <span id='courseInfoDuration'></span>
+        br
+        strong Location:
+        |  <span id='courseInfoLocation'></span>
+        br
+        strong Payment:
+        |  <span id='courseInfoPayment'></span>
+    // /COURSE INFO
+
+    // USER LIST
+    h2 User List
+    #userList
+      table
+        thead
+          th UserName
+          th Email
+          th Delete?
+        tbody
+    // /USER LIST
+    
+    // COURSE LIST
+    h2 Courses
+    #courseList
+      table
+        thead
+          th Category1
+          th Category2
+          th Testimonials
+        tbody
+    // /COURSE LIST
+
+    // ADD USER
+    h2 Add User
+    #addUser
+      fieldset
+        input#inputUserName(type='text', placeholder='Username')
+        input#inputUserEmail(type='text', placeholder='Email')
+        br
+        input#inputUserFullname(type='text', placeholder='Full Name')
+        input#inputUserAge(type='number', placeholder='Age')
+        br
+        input#inputUserLocation(type='text', placeholder='Location')
+        input#inputUserGender(type='text', placeholder='gender')
+        br
+        button#btnAddUser Add User
+    // /ADD USER
+
+    // ADD COURSE
+    h2 Add Course
+    #addCourse
+      fieldset
+        input#inputCourseName(type='text', placeholder='Course Name:')
+        input#inputCourseInstructor(type='text', placeholder='Instructor:')
+        br
+        input#inputCourseDetails(type='text', placeholder='Details:')
+        input#inputCourseDuration(type='number', placeholder='Duration:')
+        br
+        input#inputCourseLocation(type='text', placeholder='Location')
+        input#inputCoursePayment(type='text', placeholder='Payment')
+        br
+        button#btnAddUser Add Course
+    // /ADD COURSE
+
+  // /WRAPPER
