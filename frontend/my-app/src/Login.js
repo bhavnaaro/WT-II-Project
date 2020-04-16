@@ -1,4 +1,4 @@
-import React , { Component } from 'react';
+import React, { Component } from 'react';
 import './LogIn.css';
 import { Container, Button } from 'react-bootstrap';
 
@@ -26,6 +26,16 @@ function Login() {
 					Forgot<a href="/">password?</a>
 				</p> */}
 			</form>
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
 		</Container>
 	);
 }

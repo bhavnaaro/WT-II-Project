@@ -3,8 +3,8 @@ const courseRoutes = express.Router();
 const courseModel = require("../models/courseModel");
 
 //Get all course details
-courseRoutes.route("/").get(function(req, res) {
-  courseModel.find(function(err, course) {
+courseRoutes.route("/").get(function (req, res) {
+  courseModel.find(function (err, course) {
     if (err) {
       console.log(err);
     } else {
@@ -13,9 +13,9 @@ courseRoutes.route("/").get(function(req, res) {
   });
 });
 
-courseRoutes.route("/:id").get(function(req, res) {
+courseRoutes.route("/:id").get(function (req, res) {
   let id = req.params.id;
-  courseModel.findOne({'courseId':id}, function(err, courses) {
+  courseModel.findOne({ 'courseId': id }, function (err, courses) {
     res.json(courses);
     //res.send("this is course page");
 
@@ -23,9 +23,9 @@ courseRoutes.route("/:id").get(function(req, res) {
     url = "http://localhost:5000/api/v1.0/recommendations/3";
     axios.get(url)
       .then(response => {
-        recc_course=response.data.data;
+        recc_course = response.data.data;
         console.log(recc_course);
-       // console.log(response.data.explanation);
+        // console.log(response.data.explanation);
         // recc_course.forEach(myFunction);
 
         // function myFunction(item, index) {
@@ -39,12 +39,12 @@ courseRoutes.route("/:id").get(function(req, res) {
 
 
 
-    console.log("course page",courses);
+    console.log("course page", courses);
   });
 });
 
 //Add new course to db
-courseRoutes.route("/add").post(function(req, res) {
+courseRoutes.route("/add").post(function (req, res) {
   let course = new courseModel(req.body);
   course
     .save()
@@ -54,12 +54,12 @@ courseRoutes.route("/add").post(function(req, res) {
     .catch(err => {
       res.status(400).send("Adding new course failed");
     });
-  });
+});
 
-  
+
 //Update the course details
-courseRoutes.route("/update/:id").post(function(req, res) {
-  courseModel.findById(req.params.id, function(err, coursemodel) {
+courseRoutes.route("/update/:id").post(function (req, res) {
+  courseModel.findOne({ 'courseId': id }, function (err, coursemodel) {
     if (!coursemodel) res.status(404).send("Data is not found");
     else coursemodel.courseName = req.body.courseName;
     coursemodel.description = req.body.description;
@@ -76,15 +76,15 @@ courseRoutes.route("/update/:id").post(function(req, res) {
       });
   });
 });
-  // Delete the course
-  courseRoutes.route("/delete/:id").delete(function(req, res) {
-    courseModel.findOneAndDelete({ _id: req.params.id }, function(
-      err,
-      coursemodel
-    ) {
-      if (err) res.json(err);
-      else res.json("Successfully removed");
-    });
+// Delete the course
+courseRoutes.route("/delete/:id").delete(function (req, res) {
+  courseModel.findOneAndDelete({ _id: req.params.id }, function (
+    err,
+    coursemodel
+  ) {
+    if (err) res.json(err);
+    else res.json("Successfully removed");
   });
+});
 
 module.exports = courseRoutes;

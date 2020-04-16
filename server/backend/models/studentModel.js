@@ -17,16 +17,18 @@ const schema = new mongoose.Schema({
         required: true
     },
     email: {
-        type: String
+        type: String,
+        required: true
     },
     password: {
-        type: String
+        type: String,
+        required: true
     },
 
-    course: {
+    course: [{
         type: String,
         ref: "Course"
-    }
+    }]
 });
 
 // module.exports = mongoose.model("student", schemaStudent);
