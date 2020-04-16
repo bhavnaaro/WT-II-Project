@@ -9,14 +9,10 @@ let schemaCourse = new Schema({
   courseName: {
     type: String
   },
-  description: {
+  desc: {
     type: String
   },
-  courseId: 
-    {
-      type: Number,
-      required: true
-    }
+  
   
  
  
