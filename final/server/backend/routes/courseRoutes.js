@@ -15,7 +15,7 @@ courseRoutes.route("/all").get(function (req, res) {
 
 courseRoutes.route("/:id").get(function (req, res) {
   let id = req.params.id;
-  courseModel.findOne({ 'courseId': id }, function (err, courses) {
+  courseModel.findOne({ 'courseName': id }, function (err, courses) {
     res.json(courses);
     //res.send("this is course page");
 
