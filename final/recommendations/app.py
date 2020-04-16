@@ -8,7 +8,7 @@ def get_recomendations(id):
     return engine.get_recommendations(id)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=5001)
 
 # In node:
 #   app.get('/export', function(req, res)
