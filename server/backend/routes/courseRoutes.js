@@ -3,7 +3,7 @@ const courseRoutes = express.Router();
 const courseModel = require("../models/courseModel");
 
 //Get all course details
-courseRoutes.route("/").get(function (req, res) {
+courseRoutes.route("/all").get(function (req, res) {
   courseModel.find(function (err, course) {
     if (err) {
       console.log(err);
