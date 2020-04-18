@@ -1,7 +1,7 @@
 # for reading and manipulation of our datasets
 import pandas as pd
 # for mongo and python interaction
-from pymongo import MongoClient
+#from pymongo import MongoClient
 
 # parameter here is id of the course that the customer buys
 def get_recommendations(id):

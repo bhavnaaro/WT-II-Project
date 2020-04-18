@@ -1,0 +1,10 @@
+.sectionHeading {
+  padding: 10px;
+}
+
+.jumbotext {
+  font-size: 50px;
+  position: absolute;
+  left: 5vw;
+  top: 50%;
+}

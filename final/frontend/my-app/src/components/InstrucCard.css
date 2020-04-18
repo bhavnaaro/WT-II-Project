@@ -1,0 +1,29 @@
+.profile-pic {
+  width: 100%;
+}
+
+.shadowBox {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+
+.backContainer {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+  background-color: white;
+  color: black
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+h2 {
+	margin-bottom: 1rem;
+}
