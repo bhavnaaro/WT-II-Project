@@ -34,7 +34,7 @@ class CoursePage extends Component {
         </Row>
         <Row className="justify-content-md-center">
           <Col xs={12} sm={10}>
-            <h1>{cdata['courseName']}</h1><br/><br/>
+            <h1 className="sectionHeading">{cdata['courseName']}</h1><br/><br/>
             <div>
               {cdata['desc'].split('\\n').map((item, i) => <p key={i}>{item}</p>)}
             </div>

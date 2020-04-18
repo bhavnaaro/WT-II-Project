@@ -23,7 +23,7 @@ const InstrucCard = (props) => {
  
         <div onMouseLeave = {handleHover} className = "shadowBox backContainer">
           <div className = "back">
-            <h2>{props.name}</h2>
+            <h2 style={{color:"#1686ff"}}>{props.name}</h2>
             <p>{props.shortDesc}</p>
             <Link to = {{
             pathname:'/About', 

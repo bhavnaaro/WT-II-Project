@@ -22,7 +22,7 @@ function Home() {
         </Col>
       </Row>
       <Row className="justify-content-md-center">
-        <Col xs = {12} sm = {10}>
+        <Col xs = {12} sm = {6}>
           <h1 className="sectionHeading text-center">Testimonials</h1>
           <Testimonials />
         </Col>
