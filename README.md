@@ -33,11 +33,6 @@ Python Flask/Django
 Node JS
 Mongo
 
-
-Tutorial links: https://closebrace.com/tutorials/2017-03-02/the-dead-simple-step-by-step-guide-for-front-end-developers-to-getting-up-and-running-with-nodejs-express-and-mongodb
-
-https://closebrace.com/tutorials/2017-03-02/creating-a-simple-restful-web-app-with-nodejs-express-and-mongodb
-
 -Sample Reference websites:
     <ul>
     <li>https://intellipaat.com/ </li>
