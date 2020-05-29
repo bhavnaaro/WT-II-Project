@@ -1,4 +1,4 @@
-Finished:
+# Finished:
 
 1. Homepage hits (k6 script)
 
@@ -14,4 +14,12 @@ Finished:
 
 Each has 10 users, 50 users, 100 users --> 3+ test cases per functionality
 
-Metrics:
+# Metrics:
+
+1. Results tree
+
+2. Summary table
+
+3. Graph table
+
+4. Aggregate graph
