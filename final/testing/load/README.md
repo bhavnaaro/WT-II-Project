@@ -4,7 +4,7 @@
 
 2. Adding a new course API (jMeter)
 
-3. Requesting a list of instructors (k6 script)
+3. Requesting a list of instructors (k6 script + jMeter)
 
 4. Generating new recommendations based on selected course (k6 script)
 
