@@ -10,6 +10,8 @@ Finished:
 
 5. Registering a new user for a course (jMeter)
 
+6. Registering a new admin (jMeter)
+
 Each has 10 users, 50 users, 100 users --> 3+ test cases per functionality
 
 Metrics:
