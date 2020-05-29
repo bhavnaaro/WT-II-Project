@@ -26,7 +26,7 @@ export default function() {
   var num = Math.floor(Math.random() * 6) + 1;
   
   const res = http.get('http://127.0.0.1:5001/api/v1.0/recommendations/'+num);
-  console.log(num);
+  // console.log(num);
 
   sleep(1);
 
