@@ -27,10 +27,12 @@ export default class Instructor extends Component {
 	}
 
 	myFunction(item,index) {
-		this.imgs.push(item['img']);
-		this.names.push(item['instructorName']);
-		this.shortDescs.push(item['shortDescs']);
-		this.longDescs.push(item['longDescs']);
+		if (item['img'] !== undefined) {
+			this.imgs.push(item['img']);
+			this.names.push(item['instructorName']);
+			this.shortDescs.push(item['shortDescs']);
+			this.longDescs.push(item['longDescs']);
+		}
 	}
 
 	render() {
@@ -38,6 +40,8 @@ export default class Instructor extends Component {
 		this.names=[];
 		this.shortDescs=[];
 		this.longDescs=[];
+
+		console.log(this.state.instructorData);
 
 		this.state.instructorData.forEach(this.myFunction);
 

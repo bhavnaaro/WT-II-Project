@@ -28,7 +28,9 @@ class SignUp extends Component {
 		axios.post('http://localhost:5000/student/add', student)
 			.then(res => {
 				console.log(res.data);
+				alert("Signup succeeded.");
 			}).catch(function (error) {
+				alert("Signup failed!");
 				console.log(error);
 			});
 	}
