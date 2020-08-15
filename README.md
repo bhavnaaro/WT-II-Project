@@ -1,6 +1,5 @@
-# WT-II-Project
+# Online learning portal
 
-Online learning portal:
 
 #### Login/Registration Page
 
@@ -24,18 +23,3 @@ Online learning portal:
 #### Instructor profile
     
 
-Front end
-Vue.js
-React
-
-Backend
-Python Flask/Django
-Node JS
-Mongo
-
--Sample Reference websites:
-    <ul>
-    <li>https://intellipaat.com/ </li>
-    <li>https://www.edureka.co/</li>
-    <li>https://www.knowledgehut.com/courses</li>
-    </ul>
