@@ -20,7 +20,7 @@ app.use(express.json());
 
 mongoose
     .connect(
-        "mongodb://bhavna:bhavna@cluster0-shard-00-00-8duwh.mongodb.net:27017,cluster0-shard-00-01-8duwh.mongodb.net:27017,cluster0-shard-00-02-8duwh.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority",
+        "mongodb://USERNAME:PASSWORD@cluster0-shard-00-00-8duwh.mongodb.net:27017,cluster0-shard-00-01-8duwh.mongodb.net:27017,cluster0-shard-00-02-8duwh.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority",
         { useNewUrlParser: true, useCreateIndex: true }
     )
     .then(() => {
